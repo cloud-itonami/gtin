@@ -1,0 +1,8 @@
+# Added 2026-08-13 while walking docs/operator-quickstart.md: step 1 tells you
+# to run `npm install` in kotoba/, and at e031fb5 that left 20,607 untracked
+# files in `git status`, which makes the next step of any procedure unreadable.
+node_modules/
+package-lock.json
+
+# vitest / vite scratch
+.vite-temp/
