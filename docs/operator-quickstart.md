@@ -202,4 +202,4 @@ is how the README example was verified.
   means the digits are internally consistent; it does not mean the barcode was
   ever issued.
 - **Register packaging hierarchies or cross-classify to CPC/UNSPSC/HS.**
-  `CLAUDE.md` describes both. Neither exists.
+  `AGENTS.md` describes both. Neither exists.

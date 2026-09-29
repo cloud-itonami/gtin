@@ -11,11 +11,11 @@
 At `e031fb5` this repo had no root `README.md`. The two documents a reader
 would reach for instead both described a system that is not here.
 
-`CLAUDE.md` specifies five collections, six commands, a packaging hierarchy,
+`AGENTS.md` specifies five collections, six commands, a packaging hierarchy,
 CPC/UNSPSC/HS Code cross-classification, per-GS1-prefix owner DIDs, three WIT
 capability exports, and a 60-second heartbeat emitting coverage reports. One
 collection and five functions exist. There is no `.wit` file, no scheduler, and
-no packaging or classification code anywhere in the tree. `CLAUDE.md` is the
+no packaging or classification code anywhere in the tree. `AGENTS.md` is the
 design the app was specified against, and it came across verbatim when the code
 was extracted from `etzhayyim/root`. Nothing is wrong with it as a design
 document. It is wrong as an inventory, and it is the first file in the repo.
@@ -56,7 +56,7 @@ Documentation in this repo states what was executed.
    machine's `~/.npmrc` causes and the way around it.
 3. **Where a document describes something unbuilt, it says so at the top**,
    with a table of specified-versus-present. `README.md` does this for
-   `CLAUDE.md`.
+   `AGENTS.md`.
 4. **Warts get documented as warts, and pinned by a test.** `registerGtin`
    answers a bad check digit with `{ status: "alreadyExists" }` — the same
    status as a real duplicate, distinguishable only by the absent `productUri`.
@@ -74,7 +74,7 @@ out of step with `registry.ts`. Those are substrate changes; this ADR is about
 what the documents are allowed to claim. Each of them is now pinned by a test,
 which is the cheapest way to make sure the fix is noticed when it lands.
 
-It does not touch `CLAUDE.md`, `README.edn`, or `migration.edn`. The first is
+It does not touch `AGENTS.md`, `README.edn`, or `migration.edn`. The first is
 the design of record for a system nobody has withdrawn; the other two are the
 migration record, and `README.edn` naming this repo `com-etzhayyim-app-gtin` is
 a true statement about where it came from.
