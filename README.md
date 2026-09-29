@@ -24,16 +24,16 @@ prefix to its owner, and does not know whether a barcode you hand it was ever
 issued to anyone. A valid check digit means the digits are internally
 consistent — nothing more.
 
-## Read this before `CLAUDE.md`: it is a design document, not a status report
+## Read this before `AGENTS.md`: it is a design document, not a status report
 
-`CLAUDE.md` describes a considerably larger system than the one in this repo —
+`AGENTS.md` describes a considerably larger system than the one in this repo —
 five collections, six commands, a packaging hierarchy, CPC/UNSPSC/HS Code
 cross-classification, per-GS1-prefix owner DIDs, three WIT capability exports,
 and a 60-second heartbeat emitting coverage reports. **One collection and five
 functions exist.** Nothing else on that list is implemented anywhere in this
 repository, and no heartbeat runs.
 
-| `CLAUDE.md` says | actually here |
+| `AGENTS.md` says | actually here |
 |---|---|
 | collections `product`, `packaging`, `classification`, `gs1_prefix`, `coverage_report` | `product` only |
 | commands `register-product`, `get-product`, `search-products`, `validate-gtin`, `list-by-prefix`, `register-packaging` | `registerGtin`, `lookupProduct`, `validateGtin`, `listProducts` |
@@ -41,7 +41,7 @@ repository, and no heartbeat runs.
 | `did:web:gtin.etzhayyim.com:{gs1_prefix}` per prefix owner | only `…:product:{gtin14}` |
 | 60s heartbeat → coverage metrics → ATPost | no scheduler, no cron, no heartbeat code |
 
-That is not a criticism of `CLAUDE.md` — it is the design the app was specified
+That is not a criticism of `AGENTS.md` — it is the design the app was specified
 against, and it came across verbatim when the code was extracted from
 `etzhayyim/root`. It is a criticism of reading it as an inventory. See
 [ADR-0001](docs/adr/0001-docs-state-what-was-executed.md).
